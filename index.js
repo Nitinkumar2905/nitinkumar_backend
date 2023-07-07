@@ -1,13 +1,19 @@
 const connectToMongo = require("./db");
 const express = require("express");
-var cors = require("cors");
+const cors = require("cors");
 
 connectToMongo();
 const app = express();
 const port = 8000;
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://react-personal-xi.vercel.app"],
+    methods: ["POST", "DELETE"],
+    credentials: true,
+  })
+);
 
 // available routes
 app.use("/api/auth", require("./routes/auth"));
