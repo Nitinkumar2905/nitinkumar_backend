@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Nitinkumar2905/nitinkumar_backend#readme",
   "dependencies": {
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "install": "^0.13.0",
+    "mongoose": "^7.3.2"
   }
 }
