@@ -15,6 +15,10 @@ app.use(
   })
 );
 
+app.get("/", (req,res)=>{
+  res.json("hello")
+})
+
 // available routes
 app.use("/api/auth", require("./routes/auth"));
 
