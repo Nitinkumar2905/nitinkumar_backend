@@ -9,7 +9,7 @@ const port = 8000;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://react-personal-xi.vercel.app"],
+    origin: ["https://nitinkumar.vercel.app"],
     methods: ["POST", "DELETE"],
     credentials: true,
   })
