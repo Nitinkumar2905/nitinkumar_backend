@@ -7,13 +7,7 @@ const app = express();
 const port = 8000;
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["https://react-personal-xi.vercel.app"],
-    methods: ["POST", "DELETE"],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 // available routes
 app.use("/api/auth", require("./routes/auth"));
