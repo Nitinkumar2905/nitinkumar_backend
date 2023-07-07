@@ -1,18 +1,15 @@
-const connectToMongo = require("./db").default;
+const connectToMongo = require("./db");
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
-
-// const base_url = process.env.BASE_URL;
 
 connectToMongo();
 const app = express();
-const PORT = process.env.PORT || 8000;
+const port = 8000;
 
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://deploy-mern-stack.vercel.app"],
+    origin: ["https://react-personal-xi.vercel.app"],
     methods: ["POST", "DELETE"],
     credentials: true,
   })
@@ -21,6 +18,6 @@ app.use(
 // available routes
 app.use("/api/auth", require("./routes/auth"));
 
-app.listen(PORT, () => {
-  console.log(` nitinkumar.in backend running at ${PORT}`);
+app.listen(port, () => {
+  console.log(` nitinkumar.in backend running at ${port}`);
 });
