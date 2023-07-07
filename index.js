@@ -1,6 +1,6 @@
 const connectToMongo = require("./db");
 const express = require("express");
-const cors = require("cors");
+var cors = require("cors");
 
 connectToMongo();
 const app = express();
@@ -13,5 +13,5 @@ app.use(cors());
 app.use("/api/auth", require("./routes/auth"));
 
 app.listen(port, () => {
-  console.log(` nitinkumar.in backend running at ${port}`);
+  console.log(` nitinkumar.in backend running at http://localhost:${port}`);
 });
