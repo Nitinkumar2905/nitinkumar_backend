@@ -8,11 +8,13 @@ const port = 8000;
 
 app.use(express.json());
 app.use(
-  cors({
+  cors(
+    {
     origin: ["https://nitinkumar.vercel.app"],
     methods: ["POST", "DELETE"],
     credentials: true,
-  })
+  }
+  )
 );
 
 app.get("/", (req,res)=>{

@@ -13,7 +13,7 @@ router.post(
   [
     body("name", "Enter a valid name").isLength({ min: 3 }),
     body("email", "Enter a valid email").isEmail(),
-    body("password", "Minimum length is 8").isLength({ min: 3 }),
+    body("password", "Minimum length is 8").isLength({ min: 8 }),
   ],
   async (req, res) => {
     // If there are error , return bad request & the errors
