@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(
   cors(
     {
-    origin: ["https://livetocode.vercel.app"],
+    // origin: ["https://livetocode.vercel.app"],
     origin: ["https://nitinkumar2905.vercel.app"],
     methods: ["POST", "DELETE"],
     credentials: true,
