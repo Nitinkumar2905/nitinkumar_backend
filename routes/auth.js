@@ -80,18 +80,14 @@ router.post(
       const passwordCompare = await bcrypt.compare(password, user.password);
       if (!passwordCompare) {
         const success = false;
-        return res.status(400).json({
-          success,
-          error: "Please enter correct credentials to login",
-        });
+        return res
+          .status(400)
+          .json({
+            success,
+            error: "Please enter correct credentials to login",
+          });
       }
 
-      // Check if the user is already logged in
-      if (req.user && req.user.id === user.id) {
-        return res.status(400).json({ error: "User is already logged in" });
-      }
-
-      // Generate a new  JWT token
       const data = {
         user: {
           id: user.id,
