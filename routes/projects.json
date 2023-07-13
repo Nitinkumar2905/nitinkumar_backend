@@ -12,18 +12,27 @@
     {
       "projectId": "2",
       "name": "INotes",
-      "description": "NewsMonkey is a webapp application build using newsAPI and react framework for providing the daily updates.",
+      "description": "INotes is webapp application build using MERN stack tools which helps users to store daily notes on cloud within secure network and can access from anywhere.",
       "JS framework": "React JS",
-      "gitHub_Url": "https://github.com/Nitinkumar2905/News-Monkey-App",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/Inotes",
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     },
     {
       "projectId": "3",
       "name": "VisionVault",
-      "description": "NewsMonkey is a webapp application build using newsAPI and react framework for providing the daily updates.",
+      "description": "VisionVault is a multimedia content sharing and storage platform. It provides users with a platform to upload, organize, and share various types of visual content, such as images, artwork, photographs, videos, and more. Users can create collections, curate their content, and connect with others who share similar interests.",
       "JS framework": "React JS",
-      "gitHub_Url": "https://github.com/Nitinkumar2905/News-Monkey-App",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/VisionVault",
+      "createdAt": "4/20/2023, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    },
+    {
+      "projectId": "4",
+      "name": "TextUtils",
+      "description": "A versatile text processing tool designed to simplify and streamline various text operations.",
+      "JS framework": "React JS",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/TextUtils-react",
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     }

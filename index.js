@@ -10,7 +10,6 @@ app.use(express.json());
 app.use(
   cors(
     {
-    // origin: ["https://livetocode.vercel.app"],
     origin: ["https://nitinkumar2905.vercel.app"],
     methods: ["POST", "DELETE"],
     credentials: true,
@@ -24,7 +23,8 @@ app.get("/", (req,res)=>{
 
 // available routes
 app.use("/api/auth", require("./routes/auth"));
+app.use("/api/project", require("./routes/project"));
 
 app.listen(port, () => {
-  console.log(` nitinkumar.in backend running at http://localhost:${port}`);
+  console.log(` nitinkumar2905.vercel.app backend running at http://localhost:${port}`);
 });

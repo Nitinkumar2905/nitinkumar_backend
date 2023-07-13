@@ -1,36 +1,45 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const SavedProjectSchema = new Schema({
-  projectId:{
-    type:Number,
-    required:true,
-    unique:true,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  gitHubUrl: {
-    type: String,
-    required: true,
-  },
-  author: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User", // Assuming you have a User model/component
-    required: true,
-  },
-  // Additional fields as needed
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-});
+const SavedProjectSchema = new Schema(
+  {
+    projectId: {
+      type: Number,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    gitHubUrl: {
+      type: String,
+      required: true,
+    },
+    author: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
+  }
+  // {
+  //   // Create a compound index on projectId and author fields
+  //   // to enforce unique combination for each user
+  //   indexes: [{ fields: { projectId: 1, author: 1 }, unique: true }],
+  // }
+);
 
-const savedProject = mongoose.model("SavedProject", SavedProjectSchema);
+const SavedProject = mongoose.model("SavedProject", SavedProjectSchema);
 
-module.exports = savedProject;
+module.exports = SavedProject;

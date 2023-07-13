@@ -4,7 +4,6 @@ const fs = require("fs");
 const fetchUser = require("../middleware/fetchUser");
 const path = require("path");
 const SavedProject = require("../models/SavedProject");
-const Projects = require("../models/Projects");
 
 // File path for projects.json
 const projectFilePath = path.join(__dirname, "projects.json");
@@ -20,7 +19,7 @@ router.get("/fetchAllProjects", async (req, res) => {
     const projects = projectsData.projects;
 
     res.json({ projects });
-    console.log(projects);
+    // console.log(projects);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Server Error" });
@@ -32,7 +31,17 @@ router.post("/save/:projectId", fetchUser, async (req, res) => {
   try {
     const { projectId } = req.params;
     const userId = req.user.id;
+    // const userName = req.user.name;
 
+    // Check if the project is already saved by the user
+    const existingProject = await SavedProject.findOne({
+      projectId: projectId,
+      author: userId,
+    });
+
+    if (existingProject) {
+      return res.status(400).json({ error: "Project already saved" });
+    }
     // Read projects.json file
     const rawData = fs.readFileSync(projectFilePath);
     const projectsData = JSON.parse(rawData);
@@ -54,6 +63,7 @@ router.post("/save/:projectId", fetchUser, async (req, res) => {
       description: project.description,
       gitHubUrl: project.gitHub_Url,
       author: userId,
+      user : req.user._id
     });
 
     try {
@@ -70,46 +80,31 @@ router.post("/save/:projectId", fetchUser, async (req, res) => {
   }
 });
 
-// // Fetch user-specific saved projects
-// router.get("/fetchSavedProjects", fetchUser, async (req, res) => {
-//   try {
-//     const userId = req.user.id;
+// Fetch user-specific saved projects
+router.get("/fetchSavedProjects", fetchUser, async (req, res) => {
+  try {
+    const userId = req.user.id;
 
-//     // TODO: Fetch user-specific saved projects from the database or file
+    // Query the database to fetch user-specific saved projects
+    const SavedProjects = await SavedProject.find({ author: userId });
 
-//     // Placeholder response
-//     const savedProjects = [
-//       {
-//         id: "1",
-//         name: "Saved Project 1",
-//         description: "Description of Saved Project 1",
-//         githubUrl: "https://github.com/savedproject1",
-//       },
-//       {
-//         id: "2",
-//         name: "Saved Project 2",
-//         description: "Description of Saved Project 2",
-//         githubUrl: "https://github.com/savedproject2",
-//       },
-//     ];
-
-//     res.json({ savedProjects });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: "Server Error" });
-//   }
-// });
+    res.json({ SavedProjects });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server Error" });
+  }
+});
 
 // Route for deleting a saved project
 router.delete("/remove/:projectId", fetchUser, async (req, res) => {
   try {
     const projectId = req.params.projectId;
-    // const userId = req.user.id;
+    const userId = req.user.id;
 
     // Find the saved project by projectId and author
     const savedProject = await SavedProject.findOneAndDelete({
       projectId: projectId,
-      // author: userId,
+      author: userId,
     });
 
     if (!savedProject) {
