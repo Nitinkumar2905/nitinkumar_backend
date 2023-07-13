@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "projectId": "1",
+      "name": "NewsMonkey",
+      "description": "NewsMonkey is a webapp application build using newsAPI and react framework for providing the daily updates.",
+      "JS framework": "React JS",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/News-Monkey-App",
+      "createdAt": "4/20/2023, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    },
+    {
+      "projectId": "2",
+      "name": "INotes",
+      "description": "NewsMonkey is a webapp application build using newsAPI and react framework for providing the daily updates.",
+      "JS framework": "React JS",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/News-Monkey-App",
+      "createdAt": "4/20/2023, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    },
+    {
+      "projectId": "3",
+      "name": "VisionVault",
+      "description": "NewsMonkey is a webapp application build using newsAPI and react framework for providing the daily updates.",
+      "JS framework": "React JS",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/News-Monkey-App",
+      "createdAt": "4/20/2023, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    }
+  ]
+}
