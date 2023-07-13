@@ -11,7 +11,7 @@ app.use(
   cors(
     {
     origin: ["https://nitinkumar2905.vercel.app"],
-    methods: ["POST", "DELETE"],
+    methods: ["POST", "DELETE", "GET"],
     credentials: true,
   }
   )
