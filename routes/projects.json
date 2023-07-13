@@ -6,6 +6,7 @@
       "description": "NewsMonkey is a webapp application build using newsAPI and react framework for providing the daily updates.",
       "JS framework": "React JS",
       "gitHub_Url": "https://github.com/Nitinkumar2905/News-Monkey-App",
+      "Tech and Tools": ["react js", "bootstrap CSS", "newsAPI"],
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     },
@@ -15,6 +16,13 @@
       "description": "INotes is webapp application build using MERN stack tools which helps users to store daily notes on cloud within secure network and can access from anywhere.",
       "JS framework": "React JS",
       "gitHub_Url": "https://github.com/Nitinkumar2905/Inotes",
+      "Tech and Tools": [
+        "react js",
+        "bootstrap CSS",
+        "express js",
+        "mongoDB",
+        "node js"
+      ],
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     },
@@ -24,6 +32,13 @@
       "description": "VisionVault is a multimedia content sharing and storage platform. It provides users with a platform to upload, organize, and share various types of visual content, such as images, artwork, photographs, videos, and more. Users can create collections, curate their content, and connect with others who share similar interests.",
       "JS framework": "React JS",
       "gitHub_Url": "https://github.com/Nitinkumar2905/VisionVault",
+      "Tech and Tools": [
+        "react js",
+        "bootstrap CSS",
+        "express js",
+        "mongoDB",
+        "node js"
+      ],
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     },
@@ -33,6 +48,17 @@
       "description": "A versatile text processing tool designed to simplify and streamline various text operations.",
       "JS framework": "React JS",
       "gitHub_Url": "https://github.com/Nitinkumar2905/TextUtils-react",
+      "Tech and Tools": ["react js", "bootstrap CSS"],
+      "createdAt": "4/20/2023, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    },
+    {
+      "projectId": "5",
+      "name": "Pdf-Merger",
+      "description": "An efficient PDF merger tool that combines multiple PDF files into a single document seamlessly",
+      "JS framework": "Vanilla JavaScript",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/Merge-your-pdfs",
+      "Tech and Tools": ["node js", "bootstrap CSS", "express js"],
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     }
