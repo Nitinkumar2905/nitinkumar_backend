@@ -80,12 +80,10 @@ router.post(
       const passwordCompare = await bcrypt.compare(password, user.password);
       if (!passwordCompare) {
         const success = false;
-        return res
-          .status(400)
-          .json({
-            success,
-            error: "Please enter correct credentials to login",
-          });
+        return res.status(400).json({
+          success,
+          error: "Please enter correct credentials to login",
+        });
       }
 
       const data = {
@@ -112,7 +110,6 @@ router.post("/getUser", fetchUser, async (req, res) => {
     const userId = req.user.id;
     const user = await User.findById(userId).select("+password");
     res.send({ user });
-    // console.log(password)
     console.log("Fetched data successfully");
   } catch (error) {
     console.log(error);

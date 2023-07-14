@@ -31,12 +31,11 @@ router.post("/save/:projectId", fetchUser, async (req, res) => {
   try {
     const { projectId } = req.params;
     const userId = req.user.id;
-    // const userName = req.user.name;
 
     // Check if the project is already saved by the user
     const existingProject = await SavedProject.findOne({
       projectId: projectId,
-      author: userId,
+      user: userId,
     });
 
     if (existingProject) {
@@ -62,8 +61,7 @@ router.post("/save/:projectId", fetchUser, async (req, res) => {
       name: project.name,
       description: project.description,
       gitHubUrl: project.gitHub_Url,
-      author: userId,
-      user : req.user._id
+      user: userId,
     });
 
     try {
@@ -86,7 +84,7 @@ router.get("/fetchSavedProjects", fetchUser, async (req, res) => {
     const userId = req.user.id;
 
     // Query the database to fetch user-specific saved projects
-    const SavedProjects = await SavedProject.find({ author: userId });
+    const SavedProjects = await SavedProject.find({ user: userId });
 
     res.json({ SavedProjects });
   } catch (error) {
@@ -104,7 +102,7 @@ router.delete("/remove/:projectId", fetchUser, async (req, res) => {
     // Find the saved project by projectId and author
     const savedProject = await SavedProject.findOneAndDelete({
       projectId: projectId,
-      author: userId,
+      user: userId,
     });
 
     if (!savedProject) {
