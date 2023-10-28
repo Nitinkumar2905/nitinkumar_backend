@@ -68,6 +68,7 @@
       "description": "An efficient weather app which helps to check daily temperature and other aspects of weather and provides forecast details for next 3 days.",
       "JS framework": "React Js ",
       "gitHub_Url": "https://github.com/Nitinkumar2905/weatherforecast-",
+      "visit":"https://weatherforecast-api.vercel.app/",
       "Techs": ["vanila CSS", "react js", "RapidAPI"],
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
@@ -77,6 +78,17 @@
       "name": "Random Quote Generator",
       "description": "This is an application which provides functionality to generate random quotes and provides functionlality to copy them which single click.",
       "gitHub_Url": "https://github.com/Nitinkumar2905/CRT-randomQuoteGenerator",
+      "visit":"https://generatequote.vercel.app/",
+      "Techs": ["javascript", "bootstrap CSS"],
+      "createdAt": "4/20/2023, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    },
+    {
+      "projectId": "8",
+      "name": "BingeWatch",
+      "description": "BingeWatch is a platform to watch various kind of content like movies, series, shows, anime etc.",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/bingeWatch",
+      "visit":"https://binge--watch.vercel.app",
       "Techs": ["javascript", "bootstrap CSS"],
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
