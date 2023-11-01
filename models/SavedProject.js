@@ -15,9 +15,13 @@ const SavedProjectSchema = new Schema(
       type: String,
       required: true,
     },
-    gitHubUrl: {
+    gitHub_Url: {
       type: String,
       required: true,
+    },
+    visit: {
+      type: String,
+      require: true
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,
@@ -29,11 +33,6 @@ const SavedProjectSchema = new Schema(
       default: Date.now,
     },
   }
-  // {
-  //   // Create a compound index on projectId and author fields
-  //   // to enforce unique combination for each user
-  //   indexes: [{ fields: { projectId: 1, author: 1 }, unique: true }],
-  // }
 );
 
 const SavedProject = mongoose.model("SavedProject", SavedProjectSchema);

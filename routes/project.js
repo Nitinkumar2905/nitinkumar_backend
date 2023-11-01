@@ -31,6 +31,7 @@ router.post("/save/:projectId", fetchUser, async (req, res) => {
   try {
     const { projectId } = req.params;
     const userId = req.user.id;
+    const { email } = req.body;
 
     // Check if the project is already saved by the user
     const existingProject = await SavedProject.findOne({
@@ -60,8 +61,9 @@ router.post("/save/:projectId", fetchUser, async (req, res) => {
       projectId: project.projectId,
       name: project.name,
       description: project.description,
-      gitHubUrl: project.gitHub_Url,
-      user: userId,
+      gitHub_Url: project.gitHub_Url,
+      visit: project.visit,
+      user: userId
     });
 
     try {
@@ -110,7 +112,7 @@ router.delete("/remove/:projectId", fetchUser, async (req, res) => {
       return res.status(404).json({ error: "Saved project not found" });
     }
 
-    res.json({ message: "Saved project successfully removed" });
+    res.json({ message: `Project no.${projectId} is successfully removed` });
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Internal server error " });
