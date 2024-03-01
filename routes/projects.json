@@ -2,20 +2,22 @@
   "projects": [
     {
       "projectId": "1",
-      "name": "NewsMonkey",
-      "description": "NewsMonkey is a webapp application build using newsAPI and react framework for providing the daily updates.",
-      "JS framework": "React JS",
-      "gitHub_Url": "https://github.com/Nitinkumar2905/News-Monkey-App",
-      "Techs": ["react js", "bootstrap CSS", "newsAPI"],
+      "name": "BingeWatch",
+      "description": "BingeWatch is a platform to watch various kind of content like movies, series, shows, anime etc.",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/bingeWatch",
+      "visit": "https://binge--watch.vercel.app",
+      "Techs": ["javascript", "bootstrap CSS"],
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     },
+
     {
       "projectId": "2",
       "name": "INotes",
       "description": "INotes is webapp application build using MERN stack tools which helps users to store daily notes on cloud within secure network and can access from anywhere.",
       "JS framework": "React JS",
       "gitHub_Url": "https://github.com/Nitinkumar2905/Inotes",
+      "visit": "https://inotes-og.vercel.app/",
       "Techs": [
         "react js",
         "bootstrap CSS",
@@ -28,32 +30,6 @@
     },
     {
       "projectId": "3",
-      "name": "VisionVault",
-      "description": "VisionVault is a multimedia content sharing and storage platform. It provides users with a platform to upload, organize, and share various types of visual content. Users can create collections, curate their content, and connect with others who share similar interests.",
-      "JS framework": "React JS",
-      "gitHub_Url": "https://github.com/Nitinkumar2905/VisionVault",
-      "Techs": [
-        "react js",
-        "bootstrap CSS",
-        "express js",
-        "mongoDB",
-        "node js"
-      ],
-      "createdAt": "4/20/2023, 2:21:56 PM",
-      "updatedAt": "4/20/2022, 2:21:56 PM"
-    },
-    {
-      "projectId": "4",
-      "name": "TextUtils",
-      "description": "A versatile text processing tool designed to simplify and streamline various text operations.",
-      "JS framework": "React JS",
-      "gitHub_Url": "https://github.com/Nitinkumar2905/TextUtils-react",
-      "Techs": ["react js", "bootstrap CSS"],
-      "createdAt": "4/20/2023, 2:21:56 PM",
-      "updatedAt": "4/20/2022, 2:21:56 PM"
-    },
-    {
-      "projectId": "5",
       "name": "Pdf-Merger",
       "description": "An efficient PDF merger tool that combines multiple PDF files into a single document seamlessly",
       "JS framework": "Vanilla JavaScript",
@@ -63,7 +39,7 @@
       "updatedAt": "4/20/2022, 2:21:56 PM"
     },
     {
-      "projectId": "6",
+      "projectId": "4",
       "name": "Weather webApp",
       "description": "An efficient weather app which helps to check daily temperature and other aspects of weather and provides forecast details for next 3 days.",
       "JS framework": "React Js ",
@@ -74,7 +50,7 @@
       "updatedAt": "4/20/2022, 2:21:56 PM"
     },
     {
-      "projectId": "7",
+      "projectId": "5",
       "name": "Random Quote Generator",
       "description": "This is an application which provides functionality to generate random quotes and provides functionlality to copy them which single click.",
       "gitHub_Url": "https://github.com/Nitinkumar2905/CRT-randomQuoteGenerator",
@@ -84,12 +60,12 @@
       "updatedAt": "4/20/2022, 2:21:56 PM"
     },
     {
-      "projectId": "8",
-      "name": "BingeWatch",
-      "description": "BingeWatch is a platform to watch various kind of content like movies, series, shows, anime etc.",
-      "gitHub_Url": "https://github.com/Nitinkumar2905/bingeWatch",
-      "visit": "https://binge--watch.vercel.app",
-      "Techs": ["javascript", "bootstrap CSS"],
+      "projectId": "6",
+      "name": "NewsMonkey",
+      "description": "NewsMonkey is a webapp application build using newsAPI and react framework for providing the daily updates.",
+      "JS framework": "React JS",
+      "gitHub_Url": "https://github.com/Nitinkumar2905/News-Monkey-App",
+      "Techs": ["react js", "bootstrap CSS", "newsAPI"],
       "createdAt": "4/20/2023, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     }
